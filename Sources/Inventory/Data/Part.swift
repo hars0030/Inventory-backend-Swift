@@ -6,3 +6,20 @@
 //
 
 import Foundation
+import Hummingbird
+
+
+enum PartCategory {
+    case engine
+    case transmission
+    case brakes
+    case body
+}
+
+struct Part : ResponseEncodable, Decodable, Equatable {
+    let uuid: UUID
+    let name: String
+    let category: PartCategory
+    let size: String
+    let weight: Double
+}
