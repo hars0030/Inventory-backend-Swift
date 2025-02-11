@@ -6,9 +6,12 @@
 //
 
 
-import Foundation
+import Foundation	
+import Hummingbird
 
-struct Location : Codable {
+
+
+struct Location : Codable ,Equatable{
     let address: String
     let city: String
     let country: String
@@ -20,6 +23,7 @@ struct Warehouse {
     let name: String
     let location: Location
     let contactNumber: String
+    let manager : String?
     
 }
                 

@@ -16,12 +16,20 @@ enum PartCategory : Codable {
     case body
 }
 
+struct Dimensions :Codable,Equatable {
+    let length: Double
+    let width: Double
+    let height: Double
+}
+
+
+
 struct Part{
     let uuid: UUID
     let name: String
     let category: PartCategory
-    let size: String
+    let size: Dimensions?
     let weight: Double
 }
 
-extension Part  : ResponseEncodable, Decodable, Equatable { }
+extension Part  : ResponseEncodable, Decodable, Equatable {}
