@@ -8,18 +8,20 @@
 import Foundation
 import Hummingbird
 
-
-enum PartCategory {
+// public typealias Codable = Decodable & Encodable
+enum PartCategory : Codable {
     case engine
     case transmission
     case brakes
     case body
 }
 
-struct Part : ResponseEncodable, Decodable, Equatable {
+struct Part{
     let uuid: UUID
     let name: String
     let category: PartCategory
     let size: String
     let weight: Double
 }
+
+extension Part  : ResponseEncodable, Decodable, Equatable { }

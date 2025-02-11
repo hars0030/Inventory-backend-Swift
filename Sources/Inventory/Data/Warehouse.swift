@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct Location {
+struct Location : Codable {
     let address: String
     let city: String
     let country: String
 }
 
 
-struct Warehouse : ResponseEncodable, Decodable,  Equatable{
+struct Warehouse {
     let id : UUID
     let name: String
     let location: Location
@@ -23,3 +23,6 @@ struct Warehouse : ResponseEncodable, Decodable,  Equatable{
     
 }
                 
+extension Warehouse: ResponseEncodable, Decodable, Equatable {}
+
+
