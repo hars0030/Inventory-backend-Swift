@@ -20,8 +20,8 @@ actor Database {
     
 
     
-    func add(part: Part) {
-           parts.append(part)
+    func add(element: Part) {
+           parts.append(element)
        }
 
     
@@ -60,8 +60,8 @@ actor Database {
            return true
        }
     
-    func add(warehouse: Warehouse) {
-            warehouses.append(warehouse)
+    func add(element: Warehouse) {
+            warehouses.append(element)
         }
     
     func getWarehouse(by id: UUID) -> Warehouse? {
