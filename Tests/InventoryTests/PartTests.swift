@@ -107,7 +107,7 @@ struct PartTests {
     
     @Test func update() async throws {
         let id = UUID()
-        let expected1 = Part(id: id, name: "Part 1", category: .engine, size: .init(hight: 10, width: 20, length: 30), weight: 12)
+        let expected1 = Part(id: id, name: "Part 1", category: .engine, size: .init(height: 10, width: 20, length: 30), weight: 12)
         
         let _ = Database.shared.add(element: expected1)
         
