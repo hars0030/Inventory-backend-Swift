@@ -12,9 +12,9 @@ import Hummingbird
 
 
 struct Location : Codable ,Equatable{
-    let address: String
     let city: String
     let country: String
+    let address: String
 }
 
 
