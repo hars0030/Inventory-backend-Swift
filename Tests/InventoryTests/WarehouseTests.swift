@@ -75,7 +75,7 @@ struct WarehouseTests {
             manager: "John"
         )
 
-        let _ = Database.shared.add(element: expected)
+        let _ =  await Database.shared.add(element: expected)
         
         let app = try await buildApplication(TestArguments())
         try await app.test(.router) { client in
@@ -109,8 +109,8 @@ struct WarehouseTests {
             manager: "Mike"
         )
         
-        let _ = Database.shared.add(element: expected1)
-        let _ = Database.shared.add(element: expected2)
+        let _ =  await Database.shared.add(element: expected1)
+        let _ =  await Database.shared.add(element: expected2)
         
         let app = try await buildApplication(TestArguments())
         try await app.test(.router) { client in
@@ -149,7 +149,7 @@ struct WarehouseTests {
             manager: "John"
         )
         
-        let _ = Database.shared.add(element: expected1)
+        let _ =  await Database.shared.add(element: expected1)
         
         let app = try await buildApplication(TestArguments())
         try await app.test(.router) { client in
@@ -183,8 +183,8 @@ struct WarehouseTests {
             manager: "Mike"
         )
         
-        let _ = Database.shared.add(element: expected1)
-        let _ = Database.shared.add(element: expected2)
+        let _ =  await Database.shared.add(element: expected1)
+        let _ =  await Database.shared.add(element: expected2)
         
         let app = try await buildApplication(TestArguments())
         try await app.test(.router) { client in
@@ -217,8 +217,8 @@ struct WarehouseTests {
             manager: "Mike"
         )
         
-        let _ = Database.shared.add(element: expected1)
-        let _ = Database.shared.add(element: expected2)
+        let _ =  await Database.shared.add(element: expected1)
+        let _ =  await Database.shared.add(element: expected2)
         
         let app = try await buildApplication(TestArguments())
         try await app.test(.router) { client in

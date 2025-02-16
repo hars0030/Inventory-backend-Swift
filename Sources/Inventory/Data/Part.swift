@@ -10,10 +10,8 @@ import Hummingbird
 
 // public typealias Codable = Decodable & Encodable
 enum PartCategory : Codable {
-    case engine
-    case transmission
-    case brakes
-    case body
+    case engine, transmission, brakes, body
+    case exterior
 }
 
 struct Dimensions :Codable,Equatable {

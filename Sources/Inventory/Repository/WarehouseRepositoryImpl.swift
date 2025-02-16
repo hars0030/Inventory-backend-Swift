@@ -13,7 +13,7 @@ struct WarehouseRepositoryImpl: WarehouseRepository {
 
     func create(name: String, location: Location, contact: String, manager: String?) async throws -> Warehouse? {
         let warehouse = Warehouse(id: UUID(), name: name, location: location, contactNumber: contact, manager: manager)
-        await database.add(warehouse: warehouse)
+        await database.add(element: warehouse)
         return warehouse
     }
 

@@ -17,7 +17,7 @@ struct PartRepositoryImpl : PartRepository {
     func create(name: String, category: PartCategory, size: Dimensions?, weight: Double?) async throws -> Part? {
          let partWeight = weight ?? 0
         let part = Part(id: UUID(), name: name, category: category, size: size, weight: partWeight)
-        await database.add(part: part)
+        await database.add(element: part)
                 return part
             }
     
